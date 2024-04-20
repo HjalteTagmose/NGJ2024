@@ -14,9 +14,6 @@ namespace TarodevController
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour, IPlayerController
     {
-        public InputAction playerMovement;
-        public InputAction playerJump;
-
         [SerializeField] private ScriptableStats _stats;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _col;
@@ -34,17 +31,6 @@ namespace TarodevController
 
         private float _time;
 
-        private void OnEnable()
-        {
-            playerMovement.Enable();
-            playerJump.Enable();
-        }
-
-        private void OnDisable()
-        {
-            playerMovement.Disable();
-            playerJump.Disable();
-        }
 
         private void Awake()
         {
@@ -60,14 +46,20 @@ namespace TarodevController
             GatherInput();
         }
 
+        public void Move(InputAction.CallbackContext context)
+        {
+            _frameInput.Move = context.ReadValue<Vector2>();
+        }
+
+        public void Jump(InputAction.CallbackContext context)
+        {   
+            if (context.started) _frameInput.JumpDown = true;
+            if (context.canceled) _frameInput.JumpDown = false;
+            _frameInput.JumpHeld = context.ReadValueAsButton();
+        }
+
         private void GatherInput()
         {
-            _frameInput = new FrameInput
-            {
-                JumpDown = playerJump.triggered,
-                JumpHeld = playerJump.ReadValue<float>() > 0.5f,
-                Move = playerMovement.ReadValue<Vector2>()
-            };
 
             if (_stats.SnapInput)
             {
@@ -79,6 +71,7 @@ namespace TarodevController
             {
                 _jumpToConsume = true;
                 _timeJumpWasPressed = _time;
+                _frameInput.JumpDown = false;
             }
         }
 
