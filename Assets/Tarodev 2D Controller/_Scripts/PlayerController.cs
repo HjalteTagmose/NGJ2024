@@ -22,11 +22,9 @@ namespace TarodevController
         private bool _cachedQueryStartInColliders;
 
         #region Interface
-
-        public Vector2 FrameInput => _frameInput.Move;
+        public FrameInput FrameInput => _frameInput;
         public event Action<bool, float> GroundedChanged;
         public event Action Jumped;
-
         #endregion
 
         private float _time;
@@ -238,6 +236,6 @@ namespace TarodevController
         public event Action<bool, float> GroundedChanged;
 
         public event Action Jumped;
-        public Vector2 FrameInput { get; }
+        public FrameInput FrameInput { get; }
     }
 }
