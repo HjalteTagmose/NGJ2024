@@ -3637,10 +3637,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1890490805894369310, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5419179456158292118, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.33
@@ -3684,10 +3680,6 @@ PrefabInstance:
     - target: {fileID: 6714648720263914820, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
       propertyPath: m_Name
       value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 8219415549393503085, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

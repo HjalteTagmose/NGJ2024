@@ -21,6 +21,11 @@ public class PlayerAnimator : MonoBehaviour
 		anim.SetBool("IsMoving", isMoving);
 
 		if (isMoving)
-			sr.flipX = input.Move.x > 0;
+		{
+			bool goingRight = input.Move.x > 0;
+			transform.localScale = new Vector2(
+				transform.localScale.y * (goingRight ? -1 : 1),
+				transform.localScale.y);
+		}
 	}
 }
