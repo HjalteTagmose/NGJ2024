@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2048731861319870414
 Transform:
   m_ObjectHideFlags: 0
@@ -27,11 +27,11 @@ Transform:
   m_GameObject: {fileID: 1890490805894369310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.006741264, w: 0.9999773}
-  m_LocalPosition: {x: -0.365, y: 0.802, z: -0.05698485}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 1.5066667, y: 7.6066656, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5419179456158292118}
+  m_Father: {fileID: 7911693837541482699}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.772}
 --- !u!114 &666699911141478431
 MonoBehaviour:
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.237
-  m_Color: {r: 1, g: 0.92280394, b: 0.504717, a: 1}
+  m_Color: {r: 1, g: 0.92286694, b: 0.75, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -129,7 +129,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6950977552671253924}
-  - {fileID: 2048731861319870414}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &9126657849094114017
@@ -209,14 +208,6 @@ MonoBehaviour:
     m_ActionId: 403cabcc-82eb-4b75-9b20-bb757425776d
     m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c001bd6c-9422-4c52-ada8-a03e4daebccf
-    m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d06e16d6-6dbd-40c6-9cf5-97b4eb54e58c
-    m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5002600539774273842}
         m_TargetAssemblyTypeName: TarodevController.PlayerController, Assembly-CSharp
@@ -272,6 +263,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6b3ea747-de62-443c-89cd-360c79cba3f5
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f880b794-47be-4448-857a-405ec1941324
+    m_ActionName: Player/Conceal
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -347,6 +342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 2048731861319870414}
   - {fileID: 5996815748431065054}
   m_Father: {fileID: 7436214889683832275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -533,7 +529,7 @@ GameObject:
   - component: {fileID: 7436214889683832275}
   - component: {fileID: 6114495644728944746}
   m_Layer: 0
-  m_Name: Arm
+  m_Name: arm_torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
