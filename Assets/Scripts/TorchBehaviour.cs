@@ -51,20 +51,37 @@ public class TorchBehaviour : MonoBehaviour
         light.pointLightOuterRadius = 0;
     }
 
-    private float flickerSpeed = 0.1f;
+    public float flickerSpeed = 0.1f;
     private float flickerTimer = 0f;
+
+    public bool smooth = true;
+    public float t;
+    public float targetStrength = 1;
+    public float targetRadius = 3;
 
     void Flicker()
     {
         flickerTimer += Time.deltaTime;
 
-        if (flickerTimer >= flickerSpeed)
+		if (flickerTimer >= flickerSpeed)
         {
-            float strength = Random.Range(0.8f, 1.2f);
-            light.intensity = strength;
-            light.pointLightOuterRadius = strength/2 + 2.5f;
+			targetStrength = Random.Range(0.8f, 1.2f);
+            targetRadius = targetStrength / 2 + 2.5f;
+
+			if (!smooth)
+			{
+                light.intensity = targetStrength;
+                light.pointLightOuterRadius = targetStrength / 2 + 2.5f;
+            }
 
             flickerTimer = 0f;
         }
-    }
+
+        if (smooth)
+        {
+		    t = Mathf.Clamp01( 1 - (flickerSpeed - flickerTimer) / flickerSpeed );
+            light.intensity = Mathf.MoveTowards(light.intensity, targetStrength, t);
+            light.pointLightOuterRadius = Mathf.MoveTowards(light.pointLightOuterRadius, targetRadius, t);
+        }
+	}
 }
