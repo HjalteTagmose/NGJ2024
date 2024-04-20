@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1890490805894369310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.006741264, w: 0.9999773}
-  m_LocalPosition: {x: 1.5066667, y: 7.6066656, z: 0}
+  m_LocalPosition: {x: -0.38, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 2
   m_FalloffIntensity: 0.237
-  m_Color: {r: 1, g: 0.92286694, b: 0.75, a: 1}
+  m_Color: {r: 1, g: 0.8156863, b: 0.6117647, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -95,6 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74340edf0f9d3104f8dd14f18071b32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flickerSpeed: 0.5
+  smooth: 1
+  t: 0
+  targetStrength: 1
+  targetRadius: 3
 --- !u!1 &6714648720263914820
 GameObject:
   m_ObjectHideFlags: 0
