@@ -28,4 +28,6 @@ public class PlayerAnimator : MonoBehaviour
 				transform.localScale.y);
 		}
 	}
+
+	public void Attack() => anim.SetTrigger("Attack");
 }
