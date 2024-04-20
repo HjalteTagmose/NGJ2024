@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 8219415549393503085}
   - component: {fileID: 352996751591972753}
   m_Layer: 3
-  m_Name: goblin_sneak_0
+  m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1337631418, guid: a0933ce2e6c24a541991d6068ca4e560, type: 3}
+  m_Sprite: {fileID: -265723306, guid: aeb837049b562a545b172d260fcc886d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
