@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
@@ -9,6 +6,9 @@ public class TorchBehaviour : MonoBehaviour
 {
     private new Light2D light;
     bool on = true;
+
+    public Transform anchorObj;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,7 +26,13 @@ public class TorchBehaviour : MonoBehaviour
             Flicker();
     }
 
-    public void OnConceal(InputAction.CallbackContext context){
+	private void LateUpdate()
+	{
+        if (anchorObj)
+            transform.position = anchorObj.position;
+	}
+
+	public void OnConceal(InputAction.CallbackContext context){
         if (context.started)
         {
             Conceal();
@@ -55,9 +61,9 @@ public class TorchBehaviour : MonoBehaviour
     private float flickerTimer = 0f;
 
     public bool smooth = true;
-    public float t;
-    public float targetStrength = 1;
-    public float targetRadius = 3;
+    private float t;
+    private float targetStrength = 1;
+    private float targetRadius = 3;
 
     void Flicker()
     {
