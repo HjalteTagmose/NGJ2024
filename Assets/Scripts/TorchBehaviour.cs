@@ -29,7 +29,11 @@ public class TorchBehaviour : MonoBehaviour
 	private void LateUpdate()
 	{
         if (anchorObj)
-            transform.position = anchorObj.position;
+        {
+            var pos = anchorObj.position;
+            pos.z = 6;
+			transform.position = pos;
+        }
 	}
 
 	public void OnConceal(InputAction.CallbackContext context){
