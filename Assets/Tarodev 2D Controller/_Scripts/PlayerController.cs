@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace TarodevController
 {
@@ -13,10 +14,13 @@ namespace TarodevController
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour, IPlayerController
     {
+        public InputAction playerMovement;
+        public InputAction playerJump;
+
         [SerializeField] private ScriptableStats _stats;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _col;
-        private FrameInput _frameInput;
+        private FrameInput _frameInput = new FrameInput();
         private Vector2 _frameVelocity;
         private bool _cachedQueryStartInColliders;
 
@@ -29,6 +33,18 @@ namespace TarodevController
         #endregion
 
         private float _time;
+
+        private void OnEnable()
+        {
+            playerMovement.Enable();
+            playerJump.Enable();
+        }
+
+        private void OnDisable()
+        {
+            playerMovement.Disable();
+            playerJump.Disable();
+        }
 
         private void Awake()
         {
@@ -48,9 +64,9 @@ namespace TarodevController
         {
             _frameInput = new FrameInput
             {
-                JumpDown = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.C),
-                JumpHeld = Input.GetButton("Jump") || Input.GetKey(KeyCode.C),
-                Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
+                JumpDown = playerJump.triggered,
+                JumpHeld = playerJump.ReadValue<float>() > 0.5f,
+                Move = playerMovement.ReadValue<Vector2>()
             };
 
             if (_stats.SnapInput)
@@ -72,6 +88,7 @@ namespace TarodevController
 
             HandleJump();
             HandleDirection();
+            HandleLadder();
             HandleGravity();
             
             ApplyMovement();
@@ -109,6 +126,9 @@ namespace TarodevController
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);
             }
+
+            // Ladder
+            _onLadder = Physics2D.OverlapCapsule(_col.bounds.center, _col.size, _col.direction, 0, LayerMask.GetMask("Ladder"));
 
             Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
         }
@@ -167,10 +187,28 @@ namespace TarodevController
 
         #endregion
 
+        #region Vertical
+
+        private bool _onLadder;
+
+        private void HandleLadder()
+        {
+            if (_onLadder)
+            {
+                _frameVelocity.y = Mathf.MoveTowards(_frameVelocity.y, _frameInput.Move.y * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
+            }
+        }
+
+        #endregion
+
         #region Gravity
 
         private void HandleGravity()
         {
+            if (_onLadder)
+            {
+                return;
+            }
             if (_grounded && _frameVelocity.y <= 0f)
             {
                 _frameVelocity.y = _stats.GroundingForce;
