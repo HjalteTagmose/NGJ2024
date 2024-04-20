@@ -28,8 +28,8 @@ public class PickupLoot : MonoBehaviour
         {
             Vector2 playerPosition = transform.position;
             playerPosition.y += 0.5f;
-
             loot.position = Vector2.Lerp(loot.position, playerPosition, lerpValue);
+            loot.localScale = Vector2.Lerp(loot.localScale, Vector2.zero, lerpValue);
             if (Distance(playerPosition, loot.position) < distanceForPickup)
             {
                 lootValue = loot.GetComponent<Loot>().lootValue;
