@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 2319679462138344952}
   - component: {fileID: 7623879233110061324}
   - component: {fileID: 5441526884974218362}
+  - component: {fileID: 7275347246129494374}
   m_Layer: 3
   m_Name: Goblin
   m_TagString: Untagged
@@ -370,11 +371,35 @@ MonoBehaviour:
     m_ActionId: 6b3ea747-de62-443c-89cd-360c79cba3f5
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5002600539774273842}
+        m_TargetAssemblyTypeName: TarodevController.PlayerController, Assembly-CSharp
+        m_MethodName: LightOn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f880b794-47be-4448-857a-405ec1941324
     m_ActionName: Player/Conceal
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5002600539774273842}
+        m_TargetAssemblyTypeName: TarodevController.PlayerController, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6a115850-089e-403d-93d5-5f84d61bc361
     m_ActionName: Player/Attack
   m_NeverAutoSwitchControlSchemes: 1
@@ -522,6 +547,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.69
+--- !u!114 &7275347246129494374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714648720263914820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd08321a64a971b4eb91f6d670f8113d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7353777928510335703
 GameObject:
   m_ObjectHideFlags: 0

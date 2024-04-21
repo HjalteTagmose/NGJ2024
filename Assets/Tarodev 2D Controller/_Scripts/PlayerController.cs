@@ -62,7 +62,7 @@ namespace TarodevController
             Debug.Log("Attack");
         }
 
-		public void Conceal(InputAction.CallbackContext context)
+		public void LightOn(InputAction.CallbackContext context)
 		{
 			_frameInput.LightOn = context.ReadValueAsButton();
 			print(_frameInput.LightOn);
