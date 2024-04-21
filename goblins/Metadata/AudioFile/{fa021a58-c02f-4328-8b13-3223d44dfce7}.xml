@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fa021a58-c02f-4328-8b13-3223d44dfce7}">
+		<property name="assetPath">
+			<value>Goblin Jump 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.84791666666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f68efca-849d-49f6-b9e4-a9efc97e9dd7}</destination>
+		</relationship>
+	</object>
+</objects>
