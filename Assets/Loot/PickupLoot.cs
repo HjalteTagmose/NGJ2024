@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PickupLoot : MonoBehaviour
-{   
-    [SerializeField ]int playerLoot = 0;
+{
+    public event Action<int> OnLootAdded;
+
+    public int playerLoot = 0;
     [SerializeField] float lerpValue = 0.2f;
     [SerializeField] float distanceForPickup = 0.4f;
     int lootValue = 0;
@@ -40,6 +43,7 @@ public class PickupLoot : MonoBehaviour
     {
         playerLoot += loot;
         Debug.Log("Player loot: " + playerLoot);
+        OnLootAdded?.Invoke(loot);
         return playerLoot;
     }
 }

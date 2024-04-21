@@ -98,6 +98,7 @@ MonoBehaviour:
   anchorObj: {fileID: 7911693837541482699}
   flickerSpeed: 0.5
   smooth: 1
+  strengthMult: 1
 --- !u!1 &4503316844394780308
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97760006a5e15104a8927a843015ffbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: 0
+  PickupLoot: {fileID: 3580386127617113753}
 --- !u!1 &6714648720263914820
 GameObject:
   m_ObjectHideFlags: 0
