@@ -573,6 +573,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTimeOut: 1
+  damage: 0.3
+  lootPrefabs:
+  - {fileID: 4886950913874990109, guid: 610eaedebc1125e46a520ad65078c33f, type: 3}
+  - {fileID: 4886950913874990109, guid: 054a89a339307254c8215aafcfd5ea66, type: 3}
+  - {fileID: 4886950913874990109, guid: e805a5d52b6e30b4b8d4f2392b82f305, type: 3}
+  - {fileID: 4886950913874990109, guid: e546d9dbbd41cfa4c9a939ebee094e7a, type: 3}
 --- !u!1 &7353777928510335703
 GameObject:
   m_ObjectHideFlags: 0

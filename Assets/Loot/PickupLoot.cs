@@ -14,7 +14,7 @@ public class PickupLoot : MonoBehaviour
     {
         Transform loot = collision.gameObject.transform;
         Debug.Log("Collision with " + loot.name); 
-        if (loot.tag == "Loot")
+        if (loot.tag == "Loot" && loot.GetComponent<Loot>().canBePickedUp)
         {
             Vector2 playerPosition = transform.position;
             playerPosition.y += 0.5f;

@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerController))]
-[RequireComponent(typeof(PlayerAnimator))]
 [RequireComponent(typeof(PickupLoot))]
 public class Attack : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class Attack : MonoBehaviour
     [SerializeField] float attackTimeOut = 1f;  
     PickupLoot lootManager;
     public float damage = 0.3f;
-    public GameObject lootPrefab;
+    public GameObject[] lootPrefabs;
 
     // Start is called before the first frame update
     void Start()
@@ -74,11 +73,14 @@ public class Attack : MonoBehaviour
     {
         int lootToBeSpawned = (int)(lootManager.playerLoot * damage);
         lootManager.playerLoot -= lootToBeSpawned;
+        Debug.Log("I was attacked, spawn " + lootToBeSpawned + " loot!");
 
         for (int i = 0; i < lootToBeSpawned; i++)
         {
-            GameObject loot = Instantiate(lootPrefab, transform.position, Quaternion.identity);
-            loot.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-1, 1), Random.Range(0, 1)) * 10, ForceMode2D.Impulse);
+            Vector3 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            randomDirection.Normalize();
+            GameObject loot = Instantiate(lootPrefabs[Random.Range(0, lootPrefabs.Length)], transform.position + randomDirection * 0.1f, Quaternion.identity);
+            loot.GetComponent<Rigidbody2D>().AddForce(randomDirection * 10f, ForceMode2D.Impulse);
         }
     }
 }
