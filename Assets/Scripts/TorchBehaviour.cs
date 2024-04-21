@@ -65,6 +65,9 @@ public class TorchBehaviour : MonoBehaviour
     private float flickerTimer = 0f;
 
     public bool smooth = true;
+    [Range(0.1f, 1f)]
+    public float strengthMult = 1;
+
     private float t;
     private float targetStrength = 1;
     private float targetRadius = 3;
@@ -75,8 +78,8 @@ public class TorchBehaviour : MonoBehaviour
 
 		if (flickerTimer >= flickerSpeed)
         {
-			targetStrength = Random.Range(0.8f, 1.2f);
-            targetRadius = targetStrength / 2 + 2.5f;
+			targetStrength = Random.Range(0.8f, 1.2f) * strengthMult;
+            targetRadius = targetStrength / 2 + 2.5f * strengthMult;
 
 			if (!smooth)
 			{
