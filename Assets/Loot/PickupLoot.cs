@@ -2,8 +2,10 @@ using System;
 using UnityEngine;
 using FMODUnity;
 
+
 public class PickupLoot : MonoBehaviour
 {
+    [SerializeField] private EventReference PickupLootSound;
     public event Action<int> OnLootAdded;
 
     public int playerLoot = 0;
@@ -26,6 +28,7 @@ public class PickupLoot : MonoBehaviour
                 lootValue = loot.GetComponent<Loot>().lootValue;
                 AddLoot(lootValue);
                 Debug.Log("Player picked up loot");
+                AudioManager.instance.PlayOneShot(PickupLootSound, this.transform.position);
                 Destroy(collision.gameObject);
             }
         }
