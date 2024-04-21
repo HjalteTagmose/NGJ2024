@@ -44,7 +44,7 @@ public class PickupLoot : MonoBehaviour
     private float Distance(Vector2 playerposition, Vector2 lootposition)
     {
         float distance = Vector2.Distance(playerposition, lootposition);
-        Debug.Log("Distance between player and loot: " + distance);
+        //Debug.Log("Distance between player and loot: " + distance);
 
         return distance;
     }

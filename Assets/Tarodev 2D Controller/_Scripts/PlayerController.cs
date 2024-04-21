@@ -34,7 +34,6 @@ namespace TarodevController
         {
             _rb = GetComponent<Rigidbody2D>();
             _col = GetComponent<CapsuleCollider2D>();
-
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
         }
 
@@ -54,6 +53,11 @@ namespace TarodevController
             if (context.started) _frameInput.JumpDown = true;
             if (context.canceled) _frameInput.JumpDown = false;
             _frameInput.JumpHeld = context.ReadValueAsButton();
+        }
+
+        public void Attack(InputAction.CallbackContext context)
+        {
+            _frameInput.Attack = context.started;
         }
 
         private void GatherInput()
@@ -228,6 +232,7 @@ namespace TarodevController
     {
         public bool JumpDown;
         public bool JumpHeld;
+        public bool Attack;
         public Vector2 Move;
     }
 
