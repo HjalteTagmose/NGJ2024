@@ -62,7 +62,13 @@ namespace TarodevController
             Debug.Log("Attack");
         }
 
-        private void GatherInput()
+		public void Conceal(InputAction.CallbackContext context)
+		{
+			_frameInput.LightOn = context.ReadValueAsButton();
+			print(_frameInput.LightOn);
+		}
+
+		private void GatherInput()
         {
 
             if (_stats.SnapInput)
@@ -131,7 +137,6 @@ namespace TarodevController
         }
 
         #endregion
-
 
         #region Jumping
 
@@ -235,8 +240,9 @@ namespace TarodevController
         public bool JumpDown;
         public bool JumpHeld;
         public bool Attack;
+        public bool LightOn;
         public Vector2 Move;
-    }
+	}
 
     public interface IPlayerController
     {
