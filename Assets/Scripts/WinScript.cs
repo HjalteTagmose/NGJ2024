@@ -9,6 +9,9 @@ public class WinScript : Singleton<WinScript>
 	public Transform shadowRealm;
 	public int goblinsYeeted = 0;
 
+	public GameObject destroyGo;
+	public GameObject turnOn;
+
 	public void YeetGoblin(Transform goblin)
 	{
 		goblin.position = shadowRealm.position;
@@ -20,6 +23,9 @@ public class WinScript : Singleton<WinScript>
 
 	public async void PlaceGoblins()
 	{
+		Destroy(destroyGo);
+		turnOn.SetActive(true);
+
 		var goblins = GameObject.FindObjectsOfType<PickupLoot>();
 		goblins = goblins.OrderByDescending(goblin => goblin.playerLoot).ToArray();
 
