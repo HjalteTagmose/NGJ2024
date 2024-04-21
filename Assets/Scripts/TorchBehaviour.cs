@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using FMODUnity;
 
 public class TorchBehaviour : MonoBehaviour
 {
+    [SerializeField] private EventReference TorchIgniteSound;
+    [SerializeField] private EventReference TorchExtinguishSound;
     private new Light2D light;
     bool on = true;
 
@@ -39,11 +42,13 @@ public class TorchBehaviour : MonoBehaviour
 	public void OnConceal(InputAction.CallbackContext context){
         if (context.started)
 		{
-			Reveal();
+            if(!on)AudioManager.instance.PlayOneShot(TorchIgniteSound, this.transform.position);
+            Reveal();
 		}
         if (context.canceled)
 		{
-			Conceal();
+            if (on) AudioManager.instance.PlayOneShot(TorchExtinguishSound, this.transform.position);
+            Conceal();
         }
     }
 
