@@ -138,7 +138,7 @@ namespace TarodevController
             if (_onDoor)
             {
                 Debug.Log(GetComponent<PickupLoot>().playerLoot);
-                Destroy(gameObject);
+                WinScript.Instance.YeetGoblin(transform);
             }
 
             Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
