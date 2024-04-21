@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 7275347246129494374}
   m_Layer: 3
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd08321a64a971b4eb91f6d670f8113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTimeOut: 1
 --- !u!1 &7353777928510335703
 GameObject:
   m_ObjectHideFlags: 0
