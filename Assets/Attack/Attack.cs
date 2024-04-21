@@ -6,6 +6,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(PickupLoot))]
 public class Attack : MonoBehaviour
 {
     PlayerAnimator playerAnimator;
@@ -13,11 +15,15 @@ public class Attack : MonoBehaviour
     Vector2 goblinHitBoxPosition;
     Vector2 goblinHitBoxSize = new Vector2(2.5f, 2.5f);
     float timer = 0;
-    [SerializeField] float attackTimeOut = 1f;   
+    [SerializeField] float attackTimeOut = 1f;  
+    PickupLoot lootManager;
+    public float damage = 0.3f;
+    public GameObject[] lootPrefabs;
 
     // Start is called before the first frame update
     void Start()
     {
+        lootManager = GetComponent<PickupLoot>();
         goblinHitBoxPosition = transform.position;
         goblinHitBoxPosition.x -= 1;
         player = this.GetComponent<PlayerController>();
@@ -59,7 +65,22 @@ public class Attack : MonoBehaviour
             if (otherGoblins.Count() > 0)
             {
                 var otherGoblin = otherGoblins.First();
-                Debug.Log($"Attack: {otherGoblin.collider.name}");
+                otherGoblin.collider.GetComponent<Attack>().WasAttacked();
             }
+    }
+
+    public void WasAttacked()
+    {
+        int lootToBeSpawned = (int)(lootManager.playerLoot * damage);
+        lootManager.playerLoot -= lootToBeSpawned;
+        Debug.Log("I was attacked, spawn " + lootToBeSpawned + " loot!");
+
+        for (int i = 0; i < lootToBeSpawned; i++)
+        {
+            Vector3 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            randomDirection.Normalize();
+            GameObject loot = Instantiate(lootPrefabs[Random.Range(0, lootPrefabs.Length)], transform.position + randomDirection * 0.1f, Quaternion.identity);
+            loot.GetComponent<Rigidbody2D>().AddForce(randomDirection * 10f, ForceMode2D.Impulse);
+        }
     }
 }
