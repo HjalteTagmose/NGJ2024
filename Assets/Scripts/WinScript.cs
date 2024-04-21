@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinScript : Singleton<WinScript>
 {
@@ -27,5 +28,11 @@ public class WinScript : Singleton<WinScript>
 			await Task.Delay(1000);
 			goblins[i].transform.position = podiumPos[i].position;
 		}
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.R))
+			SceneManager.LoadScene("Menu");
 	}
 }

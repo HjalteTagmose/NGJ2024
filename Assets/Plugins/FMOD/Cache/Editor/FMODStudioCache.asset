@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3430373720128291686
+--- !u!114 &-8871709905391913352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,13 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/goblins/Build/Desktop/Master.bank
+  Path: goblins/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638493048226570964
+  lastModified: 638493083642492031
   FileSizes:
   - Name: Desktop
     Value: 1707424
+  Exists: 1
+--- !u!114 &-2393109883035741818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: goblins/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638493083642492031
+  FileSizes:
+  - Name: Desktop
+    Value: 1062
   Exists: 1
 --- !u!114 &-1608753891798679753
 MonoBehaviour:
@@ -39,7 +59,7 @@ MonoBehaviour:
     Data3: -208883302
     Data4: -1905338973
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -66,7 +86,7 @@ MonoBehaviour:
     Data3: -1249556054
     Data4: -1980217995
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -87,8 +107,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 324946793635167016}
-  - {fileID: -3430373720128291686}
+  - {fileID: -2393109883035741818}
+  - {fileID: -8871709905391913352}
   EditorEvents:
   - {fileID: 7044931387170578404}
   - {fileID: -973937518448015959}
@@ -100,31 +120,11 @@ MonoBehaviour:
   - {fileID: 4325134698004032280}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   StringsBanks:
-  - {fileID: 324946793635167016}
-  cacheTime: 638493048226598136
+  - {fileID: -2393109883035741818}
+  cacheTime: 638493083642492031
   cacheVersion: 131617
---- !u!114 &324946793635167016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/goblins/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638493048226598136
-  FileSizes:
-  - Name: Desktop
-    Value: 1062
-  Exists: 1
 --- !u!114 &981847875972891768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
     Data3: -1572395128
     Data4: -1520771258
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
     Data3: -974660222
     Data4: -1753214732
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
     Data3: 1570740866
     Data4: 57094294
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
     Data3: 1797790881
     Data4: -1840666490
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
     Data3: 477934221
     Data4: 2021121421
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
     Data3: 1038698629
     Data4: 172073053
   Banks:
-  - {fileID: -3430373720128291686}
+  - {fileID: -8871709905391913352}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
