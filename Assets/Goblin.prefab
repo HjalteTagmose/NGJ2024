@@ -502,6 +502,9 @@ MonoBehaviour:
   playerLoot: 10
   lerpValue: 0.2
   distanceForPickup: 0.4
+  mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!58 &5441526884974218362
 CircleCollider2D:
   m_ObjectHideFlags: 0

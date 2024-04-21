@@ -13,6 +13,8 @@ public class PickupLoot : MonoBehaviour
     [SerializeField] float distanceForPickup = 0.4f;
     int lootValue = 0;
 
+    public LayerMask mask;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         Transform loot = collision.gameObject.transform;
@@ -20,6 +22,10 @@ public class PickupLoot : MonoBehaviour
         if (loot.tag == "Loot" && loot.GetComponent<Loot>().canBePickedUp)
         {
             Vector2 playerPosition = transform.position;
+
+            if (Physics2D.Linecast(playerPosition, loot.position, mask))
+                return;
+
             playerPosition.y += 0.5f;
             loot.position = Vector2.Lerp(loot.position, playerPosition, lerpValue);
             loot.localScale = Vector2.Lerp(loot.localScale, Vector2.zero, lerpValue);
