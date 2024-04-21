@@ -131,6 +131,14 @@ namespace TarodevController
             // Ladder
             _onLadder = Physics2D.OverlapCapsule(_col.bounds.center, _col.size, _col.direction, 0, LayerMask.GetMask("Ladder"));
 
+            // Quit Level
+            bool _onDoor = Physics2D.OverlapCapsule(_col.bounds.center, _col.size, _col.direction, 0, LayerMask.GetMask("Door"));
+            if (_onDoor)
+            {
+                Debug.Log(GetComponent<PickupLoot>().playerLoot);
+                Destroy(gameObject);
+            }
+
             Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
         }
 
