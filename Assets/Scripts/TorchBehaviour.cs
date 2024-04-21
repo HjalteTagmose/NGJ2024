@@ -10,6 +10,7 @@ public class TorchBehaviour : MonoBehaviour
     private new Light2D light;
     bool on = true;
 
+    public GameObject flameObj;
     public Transform anchorObj;
 
     // Start is called before the first frame update
@@ -20,10 +21,13 @@ public class TorchBehaviour : MonoBehaviour
             light = GetComponent<Light2D>();
         }
     }
+	private void Start()
+	{
+        Conceal();
+	}
 
-
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         if (on)
             Flicker();
@@ -57,6 +61,9 @@ public class TorchBehaviour : MonoBehaviour
         on = true;
         light.intensity = 1;
         light.pointLightOuterRadius = 1;
+
+        if (flameObj)
+            flameObj.SetActive(true);
     }
 
     public void Conceal()
@@ -64,7 +71,10 @@ public class TorchBehaviour : MonoBehaviour
         on = false;
         light.intensity = 0;
         light.pointLightOuterRadius = 0;
-    }
+
+		if (flameObj)
+			flameObj.SetActive(false);
+	}
 
     public float flickerSpeed = 0.1f;
     private float flickerTimer = 0f;

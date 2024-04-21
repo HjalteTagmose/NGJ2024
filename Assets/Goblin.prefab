@@ -109,6 +109,7 @@ MonoBehaviour:
       Data3: -1249556054
       Data4: -1980217995
     Path: event:/extinguish candle
+  flameObj: {fileID: 8567135520823388850}
   anchorObj: {fileID: 7911693837541482699}
   flickerSpeed: 0.5
   smooth: 1
