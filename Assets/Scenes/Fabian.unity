@@ -3619,86 +3619,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchIgniteSound.Path
-      value: event:/ignite candle
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchExtinguishSound.Path
-      value: event:/extinguish candle
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchIgniteSound.Guid.Data1
-      value: 1310249614
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchIgniteSound.Guid.Data2
-      value: 1078833161
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchIgniteSound.Guid.Data3
-      value: 1570740866
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchIgniteSound.Guid.Data4
-      value: 57094294
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchExtinguishSound.Guid.Data1
-      value: 880085042
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchExtinguishSound.Guid.Data2
-      value: 1224781276
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchExtinguishSound.Guid.Data3
-      value: -1249556054
-      objectReference: {fileID: 0}
-    - target: {fileID: 517882719882556459, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: TorchExtinguishSound.Guid.Data4
-      value: -1980217995
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580386127617113753, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Path
-      value: event:/looting
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580386127617113753, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data1
-      value: 2127539638
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580386127617113753, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data2
-      value: 1254305695
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580386127617113753, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data3
-      value: -1572395128
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580386127617113753, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data4
-      value: -1520771258
-      objectReference: {fileID: 0}
-    - target: {fileID: 5002600539774273842, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PlayerJumpSound.Path
-      value: event:/goblin jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 5002600539774273842, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PlayerJumpSound.Guid.Data1
-      value: -2000578309
-      objectReference: {fileID: 0}
-    - target: {fileID: 5002600539774273842, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PlayerJumpSound.Guid.Data2
-      value: 1139921885
-      objectReference: {fileID: 0}
-    - target: {fileID: 5002600539774273842, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PlayerJumpSound.Guid.Data3
-      value: -208883302
-      objectReference: {fileID: 0}
-    - target: {fileID: 5002600539774273842, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PlayerJumpSound.Guid.Data4
-      value: -1905338973
-      objectReference: {fileID: 0}
     - target: {fileID: 5419179456158292118, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.33
@@ -3742,26 +3662,6 @@ PrefabInstance:
     - target: {fileID: 6714648720263914820, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
       propertyPath: m_Name
       value: Goblin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7623879233110061324, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Path
-      value: event:/looting
-      objectReference: {fileID: 0}
-    - target: {fileID: 7623879233110061324, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data1
-      value: 2127539638
-      objectReference: {fileID: 0}
-    - target: {fileID: 7623879233110061324, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data2
-      value: 1254305695
-      objectReference: {fileID: 0}
-    - target: {fileID: 7623879233110061324, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data3
-      value: -1572395128
-      objectReference: {fileID: 0}
-    - target: {fileID: 7623879233110061324, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
-      propertyPath: PickupLootSound.Guid.Data4
-      value: -1520771258
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
