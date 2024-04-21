@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8637983406624489529}
   - component: {fileID: 1376742527963837914}
   - component: {fileID: 4176234458522654899}
-  - component: {fileID: -1747537294734397705}
+  - component: {fileID: 6907265963715589790}
   m_Layer: 7
   m_Name: ChickenLoot
   m_TagString: Loot
@@ -128,8 +128,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &-1747537294734397705
-CircleCollider2D:
+--- !u!70 &6907265963715589790
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,5 +161,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.9
+  m_Size: {x: 1.8, y: 0.76}
+  m_Direction: 1
