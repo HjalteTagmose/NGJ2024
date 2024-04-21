@@ -94,12 +94,12 @@ public class TorchBehaviour : MonoBehaviour
 		if (flickerTimer >= flickerSpeed)
         {
 			targetStrength = Random.Range(0.8f, 1.2f) * strengthMult;
-            targetRadius = targetStrength / 2 + 2.5f * strengthMult;
+            targetRadius = targetStrength + 5f * strengthMult;
 
 			if (!smooth)
 			{
                 light.intensity = targetStrength;
-                light.pointLightOuterRadius = targetStrength / 2 + 2.5f;
+                light.pointLightOuterRadius = targetStrength + 5f;
             }
 
             flickerTimer = 0f;
