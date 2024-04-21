@@ -22,8 +22,8 @@ public class BackgroundTorch : MonoBehaviour
 			var player = other.GetComponent<PlayerController>();
 			if (player == null)
 				return;
-			//if (player.FrameInput.LightOn)
-			//	TurnOn();
+			if (player.FrameInput.LightOn)
+				TurnOn();
 			print("player in range");
 		}
     }
