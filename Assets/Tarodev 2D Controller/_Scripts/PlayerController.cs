@@ -59,13 +59,11 @@ namespace TarodevController
         {
             if (context.started) _frameInput.Attack = true;
             if (context.canceled) _frameInput.Attack = false;
-            Debug.Log("Attack");
         }
 
 		public void LightOn(InputAction.CallbackContext context)
 		{
 			_frameInput.LightOn = context.ReadValueAsButton();
-			print(_frameInput.LightOn);
 		}
 
 		private void GatherInput()
