@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/goblins/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638492935321007198
+  lastModified: 638493048226570964
   FileSizes:
   - Name: Desktop
-    Value: 1666720
+    Value: 1707424
   Exists: 1
 --- !u!114 &-1608753891798679753
 MonoBehaviour:
@@ -97,12 +97,13 @@ MonoBehaviour:
   - {fileID: 6360153549541405109}
   - {fileID: 981847875972891768}
   - {fileID: -1608753891798679753}
+  - {fileID: 4325134698004032280}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3430373720128291686}
   StringsBanks:
   - {fileID: 324946793635167016}
-  cacheTime: 638492935321031182
+  cacheTime: 638493048226598136
   cacheVersion: 131617
 --- !u!114 &324946793635167016
 MonoBehaviour:
@@ -119,10 +120,10 @@ MonoBehaviour:
   Path: ../../FMOD Studio/goblins/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638492935321031182
+  lastModified: 638493048226598136
   FileSizes:
   - Name: Desktop
-    Value: 1022
+    Value: 1062
   Exists: 1
 --- !u!114 &981847875972891768
 MonoBehaviour:
@@ -142,6 +143,33 @@ MonoBehaviour:
     Data2: 1254305695
     Data3: -1572395128
     Data4: -1520771258
+  Banks:
+  - {fileID: -3430373720128291686}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4325134698004032280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/drop loot
+  m_EditorClassIdentifier: 
+  Path: event:/drop loot
+  Guid:
+    Data1: 1068075078
+    Data2: 1153974887
+    Data3: -974660222
+    Data4: -1753214732
   Banks:
   - {fileID: -3430373720128291686}
   IsStream: 0
@@ -231,7 +259,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 17000
+  Length: 47000
 --- !u!114 &8548143848288796910
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 namespace TarodevController
 {
@@ -14,6 +15,7 @@ namespace TarodevController
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour, IPlayerController
     {
+        [SerializeField] private EventReference PlayerJumpSound;
         [SerializeField] private ScriptableStats _stats;
         private Rigidbody2D _rb;
         private CapsuleCollider2D _col;
@@ -168,6 +170,7 @@ namespace TarodevController
 
         private void ExecuteJump()
         {
+            AudioManager.instance.PlayOneShot(PlayerJumpSound, this.transform.position);
             _endedJumpEarly = false;
             _timeJumpWasPressed = 0;
             _bufferedJumpUsable = false;

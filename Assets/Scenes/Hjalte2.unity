@@ -2038,11 +2038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2591822323575653574, guid: a2ae0c84adf97794faef5e7634b37c3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.78
       objectReference: {fileID: 0}
     - target: {fileID: 2591822323575653574, guid: a2ae0c84adf97794faef5e7634b37c3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3203003
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2591822323575653574, guid: a2ae0c84adf97794faef5e7634b37c3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2079,7 +2079,7 @@ PrefabInstance:
     - target: {fileID: 5005136076373910469, guid: a2ae0c84adf97794faef5e7634b37c3d, type: 3}
       propertyPath: m_PlayerPrefab
       value: 
-      objectReference: {fileID: 984008135}
+      objectReference: {fileID: 6714648720263914820, guid: 32d3762e1eb467c4d85b6178aa1d2e17, type: 3}
     - target: {fileID: 5005136076373910469, guid: a2ae0c84adf97794faef5e7634b37c3d, type: 3}
       propertyPath: m_MaxPlayerCount
       value: 3
@@ -4351,7 +4351,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 816383555}
   - {fileID: 153280988}
-  - {fileID: 6907608882465795879}
   - {fileID: 2026990803}
   - {fileID: 1003469706}
   - {fileID: 1484370997}
