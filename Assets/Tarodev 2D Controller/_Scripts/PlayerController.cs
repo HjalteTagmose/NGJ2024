@@ -57,7 +57,9 @@ namespace TarodevController
 
         public void Attack(InputAction.CallbackContext context)
         {
-            _frameInput.Attack = context.started;
+            if (context.started) _frameInput.Attack = true;
+            if (context.canceled) _frameInput.Attack = false;
+            Debug.Log("Attack");
         }
 
         private void GatherInput()

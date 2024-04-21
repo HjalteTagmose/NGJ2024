@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TarodevController;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class Attack : MonoBehaviour
         goblinHitBoxPosition = transform.position;
         goblinHitBoxPosition.x -= 1;
         player = this.GetComponent<PlayerController>();
+        playerAnimator = GetComponentInChildren<PlayerAnimator>();
 
 
     }
@@ -26,25 +28,35 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.FrameInput.Attack == true)
+        if (player.FrameInput.Attack)
         {
+            Debug.Log("attacking goblins");
             GoblinAttack();
         }
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(goblinHitBoxPosition, goblinHitBoxSize);
-    }*/
+    }
 
     void GoblinAttack()
     {
-        insideHitBox = Physics2D.BoxCast(goblinHitBoxPosition, goblinHitBoxSize, 0, Vector2.right, 1);
-        if (insideHitBox == true && gameObject.tag == "Player")
+        playerAnimator.Attack();
+
+        goblinHitBoxPosition = transform.position;
+        goblinHitBoxPosition.x -= Mathf.Sign(playerAnimator.transform.localScale.x);
+
+        RaycastHit2D[] results = new RaycastHit2D[10];
+        var filter = new ContactFilter2D();
+        int amount = Physics2D.BoxCast(goblinHitBoxPosition, goblinHitBoxSize, 0, Vector2.right, filter, results, 1);
+
+        var otherGoblins = results.Where(x => x.collider != null).Where(x => x.collider.transform != transform).Where(x => x.collider.tag == "Player");
+        if (otherGoblins.Count() > 0)
         {
-            Debug.Log("Player is inside the hitbox");
-            playerAnimator.Attack();
+            var otherGoblin = otherGoblins.First();
+            Debug.Log($"Attack: {otherGoblin.collider.name}");
         }
     }
 }
