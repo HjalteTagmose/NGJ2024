@@ -5,11 +5,14 @@ using TarodevController;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(PickupLoot))]
 public class Attack : MonoBehaviour
 {
+    [SerializeField] private EventReference PlayerAttackSound;
+    [SerializeField] private EventReference DropLootSound;
     PlayerAnimator playerAnimator;
     PlayerController player;
     Vector2 goblinHitBoxPosition;
@@ -52,6 +55,8 @@ public class Attack : MonoBehaviour
 
     void GoblinAttack()
     {
+            AudioManager.instance.PlayOneShot(PlayerAttackSound, this.transform.position);
+
             playerAnimator.Attack();
 
             goblinHitBoxPosition = transform.position;
@@ -74,6 +79,7 @@ public class Attack : MonoBehaviour
         int lootToBeSpawned = (int)(lootManager.playerLoot * damage);
         lootManager.playerLoot -= lootToBeSpawned;
         Debug.Log("I was attacked, spawn " + lootToBeSpawned + " loot!");
+        AudioManager.instance.PlayOneShot(DropLootSound, this.transform.position);
 
         for (int i = 0; i < lootToBeSpawned; i++)
         {
