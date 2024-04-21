@@ -188,6 +188,39 @@
                 },
                 {
                     "name": "",
+                    "id": "bbb45374-9045-48e5-aa54-37deb77c8d49",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1bb1824-ca7d-4418-8223-99050da970a3",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3d6499e-6438-4ec7-acac-bab7e77e9a42",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a63acd03-2b98-4555-9a78-9d7666f2fe2b",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
