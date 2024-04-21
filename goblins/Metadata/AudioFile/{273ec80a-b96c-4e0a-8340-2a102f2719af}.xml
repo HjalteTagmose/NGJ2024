@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{273ec80a-b96c-4e0a-8340-2a102f2719af}">
+		<property name="assetPath">
+			<value>drop loot - 15.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0134166666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f68efca-849d-49f6-b9e4-a9efc97e9dd7}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{319d109e-4938-4b99-92f7-19e2c168cd03}">
+		<property name="assetPath">
+			<value>looting - 3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.74445833333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f68efca-849d-49f6-b9e4-a9efc97e9dd7}</destination>
+		</relationship>
+	</object>
+</objects>
