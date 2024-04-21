@@ -129,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957453353419858084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 891430052fbb0724393bae084801f65e, type: 3}
   m_Name: 
@@ -235,6 +235,7 @@ MonoBehaviour:
   anchorObj: {fileID: 0}
   flickerSpeed: 0.7
   smooth: 1
+  strengthMult: 1
 --- !u!1 &7180475792668830703
 GameObject:
   m_ObjectHideFlags: 0
