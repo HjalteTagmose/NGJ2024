@@ -38,12 +38,12 @@ public class TorchBehaviour : MonoBehaviour
 
 	public void OnConceal(InputAction.CallbackContext context){
         if (context.started)
-        {
-            Conceal();
-        }
+		{
+			Reveal();
+		}
         if (context.canceled)
-        {
-            Reveal();
+		{
+			Conceal();
         }
     }
 
